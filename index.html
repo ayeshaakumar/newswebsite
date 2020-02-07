@@ -2,109 +2,309 @@
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
- <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script>
+function myFunction() {
+  document.getElementById("hidden").style.display = "none"; 
+  document.getElementById("seen1").style.display = "inline";
+  document.getElementById("seen2").style.display = "inline";        
+}
+</script>
+
   <style>
-  p{color:grey;
+  *{
+    box-sizing:border-box;
   }
-  body {
-      position: relative; 
+  a[class~="nav-link"]{
+    border-right:1px solid #f1f1f1;
+    display:inline-block;
+   }
+   a:link{
+     color:black;
+   }
+   a:hover{
+  color: red;
+}
+input:focus{
+outline:none;
+}
+p.underred:hover{
+text-decoration:underline;
+text-decoration-color:red;
+}
+.hoverred:hover{
+color:red;
+}
+span.hover{
+background-color:#e6e6e6;
+}
+span.hover:hover{
+color:#e6e6e6;
+background-color:black;
+}
+@media only screen and (max-width: 990px) {
+  li{
+    text-align:center;
+    
   }
-  a{
-  color:grey;
-  font-size:20px;
-  border-bottom:1px solid grey;
-  }
-  a:hover{
-  color:black;
-  }
-  a.active{
-  font-weight:bold;
-  }
+  a[class~="nav-link"]{
+    border:none;
+   }
+}
   </style>
 </head>
-<body data-spy="scroll" data-target="#myScrollspy" data-offset="100">
-<div class="container-fluid">
+<body style="background-color:#f6f6f6">
+<div class="container w-100 " style="background-color:white;padding:0;">
+<div class="container-fluid pr-0 ">
+<div  class=" row w-100 text-white"style="background-color:red;">
+
+<div class="col-lg-3 " style="padding-top:8%"  >02,Feb,2020</div>
+<div  class=" col-lg-6 display-1  text-center  "> Newsweek</div>
+<div class=" col-lg-3 text-right a  d-inline-block" style="padding-top:8%" >
+<a class=""><b>SIGN IN</b></a>
+<a style="background-color:white;color:red;" class="p-2"><b>SUBSCRIBE ></b></a>
+</div>
+</div>
+</div>
+<nav class="navbar navbar-expand-lg " style="border:1px solid #f1f1f1">
+
+<ul class="navbar-nav w-100" id="hidden" style="display:">
+<li class="nav-item "><a class="nav-link px-2" href="#"><b>U.S</b></a></li>
+<li class="nav-item"><a class="nav-link px-2 " href="#" ><b>World</b></a></li>
+<li class="nav-item "><a class="nav-link px-2" href="#" ><b>Business</b></a></li>
+<li class="nav-item"><a class="nav-link px-2 " href="#" ><b><nobr>Tech and Science</nobr></b></a></li>
+<li class="nav-item"><a class="nav-link px-2" href="#" ><b>Culture</b></a></li>
+<li class="nav-item"><a class="nav-link px-2" href="#" ><b>Newsgeek</b></a></li>
+<li class="nav-item"><a class="nav-link px-2" href="#" ><b>Sports</b></a></li>
+<li class="nav-item"><a class="nav-link px-2" href="#" ><b>Health</b></a></li>
+<li class="nav-item"> <a class="nav-link px-2" href="#" ><b><nobr>The Debate</nobr></b></a></li>
+<li class="nav-item"><a class="nav-link px-2" href="#" ><b>Vantage</b></a></li>
+<li class="nav-item"><a class="nav-link px-2 " href="#" style="border-right:none" ><b>Weather</b></a></li>
+<li class="nav-item p-2" ><span class="p-0 " onclick="myFunction()"><nobr>Search<i class="fas fa-search px-2"></i></nobr></span></li>
+</ul><nobr class="w-100">
+<input   id="seen1" style="border:none;display:none;width:95%;"></input>
+<i class="fas fa-search px-2 "   id="seen2" style="display:none;width:5%;" ></i></nobr>
+</nav>
 <div class="row">
-<div class="col-4 border"  >
-<div style="position:fixed;overflow-y:scroll;height:500px;">
-<h3 class="p-2" style="border-bottom:1px solid grey;"><nobr>JS Documentation</nobr></h3>
- <nav  id="myScrollspy">
-      <ul class="nav navbar-nav flex-column p-3">
-        <li class="nav-item">
-          <a class="nav-link active" href="#introduction">Introduction</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#shouldknow">What you should already know</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#jsandjava">JavaScript and Java</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#helloworld">Hello World</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#variables">Variables</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#declaring">Declaring Variables</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#scope">Variable Scope</a>
-        </li>
-        
-        
-        
-      </ul>
-    </nav>
+<div class="col-lg-3 col-md-6 p-4 ">
+<h6 style="color:grey">FEATURED STORIES</h6>
+<div>
+<div style="position:relative">
+<img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 " style="width:100%;">
+<div id="over" style="color:red;position:absolute;left:0;bottom:0;background-color:rgba(242,242,242,0.7);padding:3%"><b>POLITICS</b></div>
+</div>
+<p class="underred" style="font-size:25px;line-height:100%;padding:4% 0;"><b>Jewish Protester Removed From Donald Trump Jr. Iowa Speech</b></p>
+<p>The protester accused the president's son of spreading anti-Semitic conspiracy theories.</p>
+</div>
+<div class="hoverred" style="border-bottom:1px solid #f1f1f1;border-top:1px solid #f1f1f1">
+<b>Wuhan Doctor Allegedly Silenced by Police for Trying to Alert People to Coronavirus Tests Positive for Virus</b>
+</div>
+<div>
+<div style="position:relative">
+<img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 " style="width:100%;">
+<div id="over" style="color:red;position:absolute;left:0;bottom:0;background-color:rgba(242,242,242,0.7);padding:3%"><b>POLITICS</b></div>
+</div>
+<p class="underred" style="font-size:25px;line-height:100%;padding:4% 0;"><b>Jewish Protester Removed From Donald Trump Jr. Iowa Speech</b></p>
+<p>The protester accused the president's son of spreading anti-Semitic conspiracy theories.</p>
+</div>
+<div class="sponsored mt-3" style="border:1px solid #f2f2f2;">
+<div style="position:relative;">
+<img src="img_avatar3.png" alt="John Doe" class="mr-3  " style="width:100%;">
+<div id="over" style="color:blue;position:absolute;left:0;bottom:0;background-color:rgba(242,242,242,0.7);padding:3%"><b>SPONSORED INSIGHT</b></div>
+</div>
+<p class="underred" style="font-size:25px;line-height:100%;padding:4% ;"><b>Female Entrepreneur Active in Tokyo and Uganda</b></p>
+<p style="padding:4%">APT Women aims to foster and educate fledgling global business leaders like Chizu Nakamoto.</p>
+</div>
+<div class="sponsored mt-3" style="border:1px solid #f2f2f2;">
+<div style="position:relative;">
+<img src="img_avatar3.png" alt="John Doe" class="mr-3  " style="width:100%;">
+<div id="over" style="color:blue;position:absolute;left:0;bottom:0;background-color:rgba(242,242,242,0.7);padding:3%"><b>SPONSORED INSIGHT</b></div>
+</div>
+<p class="underred" style="font-size:25px;line-height:100%;padding:4% ;"><b>Female Entrepreneur Active in Tokyo and Uganda</b></p>
+<p style="padding:4%">APT Women aims to foster and educate fledgling global business leaders like Chizu Nakamoto.</p>
+</div>
+</div>
+
+<div class="col-lg-6 col-md-6 p-2 pt-4">
+<h6 style="color:grey">TOP STORY</h6>
+<div>
+<div style="position:relative">
+<img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 " style="width:100%;">
+<div id="over" style="color:red;position:absolute;left:0;bottom:0;background-color:rgba(242,242,242,0.7);padding:3%"><b>POLITICS</b></div>
+</div>
+<p class="underred" style="font-size:25px;line-height:100%;padding:4% 0;"><b>Jewish Protester Removed From Donald Trump Jr. Iowa Speech</b></p>
+<p>The protester accused the president's son of spreading anti-Semitic conspiracy theories.</p>
+</div>
+<div class="hoverred" style="border-bottom:1px solid #f1f1f1;border-top:1px solid #f1f1f1">
+<b>After Iowa Caucus Debacle, Trump Campaign Plans Political Ad Slamming Democrats: 'It Was a Clown Show, An Epic Fail'</b>
+</div>
+<div class="hoverred" style="border-bottom:1px solid #f1f1f1;border-top:1px solid #f1f1f1">
+<b>Will Iowa's Voting Problem Affect Other Caucuses?</b>
+</div><br>
+<div class="container-fluid p-0 " style="background-color:#f2f2f2">
+<h6 style="color:grey;padding-top:2%">CULTURE AND TRAVEL</h6>
+<div class="row ">
+<div class="col-6 ">
+<div>
+<img src="img_avatar3.png" alt="John Doe" class=" mt-2 " style="width:100%;">
+<p class="pl-2 pt-3" style="font-weight:500;font-size:18px;line-height:100%" >Rising Teen Star Koffee Gives Reggae a Jolt to the Mainstream</p>
+<p class="pl-2">Though Jamaican artists have been pigeon-holed or marginalized, they're finally taking off stateside. Meet Koffee, the first female artist to take home the Grammy for best reggae album�at 19 years old.</p>
+<span class="hover ml-2 px-2">Music</span><br>
+</div>
+<div>
+<img src="img_avatar3.png" alt="John Doe" class=" mt-2 " style="width:100%;">
+<p class="hover pl-2 pt-3" style="font-weight:500;font-size:18px;line-height:100%" >Rising Teen Star Koffee Gives Reggae a Jolt to the Mainstream</p>
+<p class="pl-2">Though Jamaican artists have been pigeon-holed or marginalized, they're finally taking off stateside. Meet Koffee, the first female artist to take home the Grammy for best reggae album�at 19 years old.</p>
+<span class="hover ml-2 px-2">Music</span><br><br>
+</div>
+</div>
+<div class="col-6">
+<div>
+<img src="img_avatar3.png" alt="John Doe" class=" mt-2 " style="width:100%;">
+<p class="pl-2 pt-3" style="font-weight:500;font-size:18px;line-height:100%" >Rising Teen Star Koffee Gives Reggae a Jolt to the Mainstream</p>
+<p class="pl-2">Though Jamaican artists have been pigeon-holed or marginalized, they're finally taking off stateside. Meet Koffee, the first female artist to take home the Grammy for best reggae album�at 19 years old.</p>
+<span class="hover ml-2 px-2">Music</span><br>
+</div>
+<div>
+<img src="img_avatar3.png" alt="John Doe" class=" mt-2 " style="width:100%;">
+<p class="pl-2 pt-3" style="font-weight:500;font-size:18px;line-height:100%" >Rising Teen Star Koffee Gives Reggae a Jolt to the Mainstream</p>
+<p class="pl-2">Though Jamaican artists have been pigeon-holed or marginalized, they're finally taking off stateside. Meet Koffee, the first female artist to take home the Grammy for best reggae album�at 19 years old.</p>
+<span class="hover ml-2 px-2">Music</span><br><br>
+</div>
+</div>
+</div>
+</div>
+<h6 style="color:grey">LATEST NEWS</h6>
+<div class="media p-3" style="border-bottom:1px solid #f1f1f1">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 " style="width:60px;">
+    <div class="media-body">
+      
+      <p class="hoverred"><b>Trump's Travel Ban on Nigeria Will Hurt Both Countries</b></p>
+      <b style="font-size:80%">BY SAM HILL</b>
     </div>
 </div>
-<div class="col-8">
-<div id="introduction">
-<h3 class="p-2">Introduction</h3>
-<p class="pl-4">JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.</p>
-<p class="pl-4">This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs specific to Web pages, please see Web APIs and DOM.</p>
+<div class="media p-3" style="border-bottom:1px solid #f1f1f1">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 " style="width:60px;">
+    <div class="media-body">
+      
+      <p class="hoverred"><b>Trump's Travel Ban on Nigeria Will Hurt Both Countries</b></p>
+      <b style="font-size:80%">BY SAM HILL</b>
+    </div>
 </div>
-<div id="shouldknow">
-<h3 class="p-2">What you should already know</h3>
-<p class="pl-4">JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.</p>
-<p class="pl-4">This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs specific to Web pages, please see Web APIs and DOM.</p>
+<div class="media p-3" style="border-bottom:1px solid #f1f1f1">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 " style="width:60px;">
+    <div class="media-body">
+      
+      <p class="hoverred"><b>Trump's Travel Ban on Nigeria Will Hurt Both Countries</b></p>
+      <b style="font-size:80%">BY SAM HILL</b>
+    </div>
 </div>
-<div id="jsandjava">
-<h3 class="p-2">JavaScript and Java</h3>
-<p class="pl-4">JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.</p>
-<p class="pl-4">This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs specific to Web pages, please see Web APIs and DOM.</p>
+<div class="media p-3" style="border-bottom:1px solid #f1f1f1">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 " style="width:60px;">
+    <div class="media-body">
+      
+      <p class="hoverred"><b>Trump's Travel Ban on Nigeria Will Hurt Both Countries</b></p>
+      <b style="font-size:80%">BY SAM HILL</b>
+    </div>
 </div>
-<div id="helloworld">
-<h3 class="p-2">Hello World</h3>
-<p class="pl-4">JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.</p>
-<p class="pl-4">This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs specific to Web pages, please see Web APIs and DOM.</p>
 </div>
-<div id="variables">
-<h3 class="p-2">Variables</h3>
-<p class="pl-4">JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.</p>
-<p class="pl-4">This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs specific to Web pages, please see Web APIs and DOM.</p>
+<div class="col-lg-3 col-md-12 p-4">
+<h6 style="color:grey">OPINION</h6>
+<div class="media p-3" style="border-bottom:1px solid #f1f1f1">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+    <div class="media-body">
+      
+      <p class="hoverred"><b>Trump's Travel Ban on Nigeria Will Hurt Both Countries</b></p>
+      <b style="font-size:80%">BY SAM HILL</b>
+    </div>
 </div>
-<div id="declaring">
-<h3 class="p-2">Declaring Variables</h3>
-<p class="pl-4">JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.</p>
-<p class="pl-4">This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs specific to Web pages, please see Web APIs and DOM.</p>
+<div class="media p-3" style="border-bottom:1px solid #f1f1f1">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+    <div class="media-body">
+      
+      <p class="hoverred"><b>Trump's Travel Ban on Nigeria Will Hurt Both Countries</b></p>
+      <b style="font-size:80%">BY SAM HILL</b>
+    </div>
 </div>
-<div id="scope">
-<h3 class="p-2">Variable Scope</h3>
-<p class="pl-4">JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.</p>
-<p class="pl-4">This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about APIs specific to Web pages, please see Web APIs and DOM.</p>
+<div class="media p-3" style="border-bottom:1px solid #f1f1f1">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+    <div class="media-body">
+      
+      <p class="hoverred"><b>Trump's Travel Ban on Nigeria Will Hurt Both Countries</b></p>
+      <b style="font-size:80%">BY SAM HILL</b>
+    </div>
+</div><br><br>
+<h6 style="color:grey">LATEST NEWS</h6>
+<div class="media p-3" style="border-bottom:1px solid #f1f1f1">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 " style="width:60px;">
+    <div class="media-body">
+      
+      <p class="hoverred"><b>Trump's Travel Ban on Nigeria Will Hurt Both Countries</b></p>
+      <b style="font-size:80%">BY SAM HILL</b>
+    </div>
+</div>
+<div class="media p-3" style="border-bottom:1px solid #f1f1f1">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 " style="width:60px;">
+    <div class="media-body">
+      
+      <p class="hoverred"><b>Trump's Travel Ban on Nigeria Will Hurt Both Countries</b></p>
+      <b style="font-size:80%">BY SAM HILL</b>
+    </div>
+</div>
+<div class="media p-3" style="border-bottom:1px solid #f1f1f1">
+    <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 " style="width:60px;">
+    <div class="media-body">
+      
+      <p class="hoverred"><b>Trump's Travel Ban on Nigeria Will Hurt Both Countries</b></p>
+      <b style="font-size:80%">BY SAM HILL</b>
+    </div>
+</div>
+<div class="sponsored mt-3" style="border:1px solid #f2f2f2;">
+<div style="position:relative;">
+<img src="img_avatar3.png" alt="John Doe" class="mr-3  " style="width:100%;">
+<div id="over" style="color:blue;position:absolute;left:0;bottom:0;background-color:rgba(242,242,242,0.7);padding:3%"><b>SPONSORED INSIGHT</b></div>
+</div>
+<p class="underred" style="font-size:25px;line-height:100%;padding:4% ;"><b>Female Entrepreneur Active in Tokyo and Uganda</b></p>
+<p style="padding:4%">APT Women aims to foster and educate fledgling global business leaders like Chizu Nakamoto.</p>
+</div>
+</div>
 </div>
 
-
-</div>
-</div>
-</div>
 
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
